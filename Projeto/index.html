@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Velha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="displayContainerInformativo">
+            <input class="displayInformativo" type="text" disabled value="Clique em SORTEAR para iniciar o jogo!">
+        </div>
+        <div id="displayContainerJogo" style="display: none;">
+            <input class="displayMaior" id="principalDisplay" type="text" disabled>
+            <input class="displayCronometro" id="cronometroDisplay" type="text" disabled value="00:00">
+        </div>
+        
+        <div class="ContainerBtnsortear">
+            <button id="sortear" onclick="realizarSorteio()">SORTEAR</button>
+        </div>
+
+        <div id="painel">
+            <div>
+                <button type="button" class="btn" onclick="btn(1)" aria-label="Célula 1" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(2)" aria-label="Célula 2" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(3)" aria-label="Célula 3" disabled>|</button>
+            </div>
+            <div>
+                <button type="button" class="btn" onclick="btn(4)" aria-label="Célula 4" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(5)" aria-label="Célula 5" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(6)" aria-label="Célula 6" disabled>|</button>
+            </div>
+            <div>
+                <button type="button" class="btn" onclick="btn(7)" aria-label="Célula 7" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(8)" aria-label="Célula 8" disabled>|</button>
+                <button type="button" class="btn" onclick="btn(9)" aria-label="Célula 9" disabled>|</button>
+            </div>
+        </div>
+    </div>
+      
+    <div id="painelVencedor" style="display: none;">
+        <div id="ContainerPainelVencedor">
+            <div id="PainelParteSuperior">
+                <i class="fa fa-trophy"></i>
+                <br>
+                <p id="mensagemVencedor"></p>
+            </div>
+            <div id="PainelParteInferior">
+                <button type="button"  id="btnVoltarInicio" onclick="reiniciarJogo()">INÍCIO</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
